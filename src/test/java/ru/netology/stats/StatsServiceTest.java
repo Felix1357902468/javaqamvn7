@@ -6,28 +6,28 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
-   private org.junit.jupiter.api.Assertions Assertions;
-
-   @Test
-    public void testCalculateTotalSale(){
-       long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-       StatsService service = new StatsService();
-
-      Long actual;
-       actual = service.calculateTotalSale(sales);
-       Long expected = (long) (8+ 15+ 13+ 15+ 17+ 20+ 19+ 20+ 7+ 14+ 14+ 18);
-
-       Assertions.assertEquals(expected, actual);
-   }
+    private org.junit.jupiter.api.Assertions Assertions;
 
     @Test
-    public void testcalCulateAverageSale(){
+    public void testCalculateTotalSale() {
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        StatsService service = new StatsService();
+
+        Long actual;
+        actual = service.calculateTotalSale(sales);
+        Long expected = (long) (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testcalCulateAverageSale() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         Long actual;
         actual = service.calculateAverageSale(sales);
-        Long expected = (long) (8+ 15+ 13+ 15+ 17+ 20+ 19+ 20+ 7+ 14+ 14+ 18) / 12;
+        Long expected = (long) (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -39,7 +39,7 @@ class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-      Long actual = (long) service.calculateMonthMaximumSale(sales);
+        Long actual = (long) service.calculateMonthMaximumSale(sales);
         Long expected = 8L;
 
         Assertions.assertEquals(expected, actual);
